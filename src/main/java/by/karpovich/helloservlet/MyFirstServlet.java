@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 public class MyFirstServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("this is servlet");
         PrintWriter writer = resp.getWriter();
         writer.println("This is my response");
     }

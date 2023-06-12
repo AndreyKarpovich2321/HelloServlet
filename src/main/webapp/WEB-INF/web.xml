@@ -11,4 +11,23 @@
         <servlet-name>First</servlet-name>
         <url-pattern>/here</url-pattern>
     </servlet-mapping>
+    <filter>
+    <filter-name>MyFilter</filter-name>
+        <filter-class>by.karpovich.helloservlet.HelloFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>MyFilter</filter-name>
+        <url-pattern>/here</url-pattern>
+    </filter-mapping>
+    <context-param>
+        <param-name>first</param-name>
+        <param-value>Pavel</param-value>
+    </context-param>
+    <context-param>
+        <param-name>second</param-name>
+        <param-value>super</param-value>
+    </context-param>
+    <listener>
+        <listener-class>by.karpovich.helloservlet.MyFirstListener</listener-class>
+    </listener>
 </web-app>
