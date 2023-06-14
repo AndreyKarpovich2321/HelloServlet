@@ -1,0 +1,35 @@
+p {
+    color: blue;
+    background: aquamarine;
+    font-family: "Arial Narrow";
+    font-size: 20px;
+    border-style: dotted;
+}
+body{
+    background-color: azure;
+    background-image: url("bridge.jpg");
+
+}
+#first_span{
+    color: chartreuse;
+}
+.red_element{
+    color: red;
+    font-size: 50px;
+}
+th {
+    border-style: solid;
+}
+td {
+    border-style: solid;
+    margin: 20px;
+}
+table{
+    margin: 100px 200px 100px 200px;
+}
+p:hover{
+    width: 100%;
+}
+input[type=submit]:hover{
+
+}
