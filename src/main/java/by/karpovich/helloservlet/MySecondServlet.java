@@ -32,18 +32,18 @@ public class MySecondServlet extends HttpServlet {
         System.out.println(currentParam);
         if (currentParam == null) currentParam = counter;
         session.setAttribute("count", currentParam + 1);
-        System.out.println("headers: " + req.getHeaderNames());
+        //System.out.println("headers: " + req.getHeaderNames());
         PrintWriter writer = resp.getWriter();
         writer.println("This is my second response" + ". " + currentParam);
-        Iterator<String> headersIterator = req.getHeaderNames().asIterator();
+        /*Iterator<String> headersIterator = req.getHeaderNames().asIterator();
         while (headersIterator.hasNext()){
             writer.println("\nheaders: " + req.getHeaderNames());
-        }
+        }*/
         writer.println("\nhost: " + req.getHeader("host"));
         resp.setHeader("myHeader", "bhb");
         writer.println("\ncookies" + Arrays.asList(req.getCookies())
                 .stream().map(cookie -> cookie.getName() + " " + cookie.getValue() + " " + cookie.getMaxAge()).collect(Collectors.toList()));
-        resp.sendRedirect("/here");
+        //resp.sendRedirect("/here");
         if (currentParam > 105){
             resp.setStatus(500);
             resp.sendError(500, "too much");

@@ -10,6 +10,13 @@
     <servlet-mapping>
         <servlet-name>First</servlet-name>
         <url-pattern>/here</url-pattern>
+    </servlet-mapping><servlet>
+    <servlet-name>PPServlet</servlet-name>
+    <servlet-class>by.karpovich.helloservlet.ProtectedPageServlet</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>PPServlet</servlet-name>
+        <url-pattern>/success.html</url-pattern>
     </servlet-mapping>
     <filter>
     <filter-name>MyFilter</filter-name>
@@ -19,6 +26,14 @@
         <filter-name>MyFilter</filter-name>
         <url-pattern>/here</url-pattern>
     </filter-mapping>
+    <filter>
+        <filter-name>PPFilter</filter-name>
+        <filter-class>by.karpovich.helloservlet.ProtectedPageFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>PPFilter</filter-name>
+        <url-pattern>/success.html</url-pattern>
+    </filter-mapping>
     <context-param>
         <param-name>first</param-name>
         <param-value>Pavel</param-value>
@@ -26,6 +41,14 @@
     <context-param>
         <param-name>second</param-name>
         <param-value>super</param-value>
+    </context-param>
+    <context-param>
+        <param-name>hw_login</param-name>
+        <param-value>qwer</param-value>
+    </context-param>
+    <context-param>
+        <param-name>hw_password</param-name>
+        <param-value>asdf</param-value>
     </context-param>
     <listener>
         <listener-class>by.karpovich.helloservlet.MyFirstListener</listener-class>
